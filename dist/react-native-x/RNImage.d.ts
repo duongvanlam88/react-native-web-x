@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 import { ImageStyle, StyleProp } from '../react-native-web-x';
 export interface RNImageProps {

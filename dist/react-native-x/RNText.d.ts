@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 import { StyleProp, TextStyle } from '../react-native-web-x';
 export interface RNTextProps {

@@ -14,6 +14,7 @@
 //   {cancelable: false},
 // );
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RNAlert = exports.WEB_EVENT_SHOW_DIALOG = void 0;
 exports.WEB_EVENT_SHOW_DIALOG = 'web_event_show_dialog';
 class RNAlert {
     static setOnAlert(onAlert) {

@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RNTouchableOpacity = void 0;
 const react_1 = __importDefault(require("react"));
 class RNTouchableOpacity extends react_1.default.Component {
     constructor(props) {
@@ -57,14 +58,14 @@ class RNTouchableOpacity extends react_1.default.Component {
                     if (event.which === 13) {
                         this.handleOnClick(event);
                     }
-                }, onClick: this.handleOnClick, style: Object.assign({}, style, (backgroundColor ? { background: backgroundColor } : {})) }, this.props.children));
+                }, onClick: this.handleOnClick, style: Object.assign(Object.assign({}, style), (backgroundColor ? { background: backgroundColor } : {})) }, this.props.children));
         }
         else {
             return (react_1.default.createElement("div", { ref: (node) => this.componentRef = node, className: `TouchableOpacity ${className} ${(disabled) ? 'disabled' : ''}`, tabIndex: 0, onKeyPress: (event) => {
                     if (event.which === 13) {
                         this.handleOnClick(event);
                     }
-                }, onClick: this.handleOnClick, style: Object.assign({}, style, (backgroundColor ? { background: backgroundColor } : {})) }, this.props.children));
+                }, onClick: this.handleOnClick, style: Object.assign(Object.assign({}, style), (backgroundColor ? { background: backgroundColor } : {})) }, this.props.children));
         }
     }
 }

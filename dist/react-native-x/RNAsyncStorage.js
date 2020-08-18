@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RNAsyncStorage = void 0;
 class RNAsyncStorage {
     static getItem(key, callback) {
         const value = localStorage.getItem(key);

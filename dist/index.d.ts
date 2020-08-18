@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 import './index.css';
 export * from './react-native-web-x';

@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 import { StyleProp, ViewStyle } from '../react-native-web-x';
 export interface RNImageBackgroundProps {
