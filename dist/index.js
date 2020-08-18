@@ -4,6 +4,7 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 require("./index.css");
+// we must export this before our custom components
 __export(require("./react-native-web-x"));
 const RNActivityIndicator_1 = require("./react-native-x/RNActivityIndicator");
 exports.ActivityIndicator = RNActivityIndicator_1.RNActivityIndicator;
