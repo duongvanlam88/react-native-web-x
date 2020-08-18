@@ -1,0 +1,310 @@
+/* z-index: -1 */
+body .rn-zIndex-1wyyakw,
+body .rn-1wyyakw {
+  z-index: unset;
+}
+
+/* z-index: 0 */
+body .rn-zIndex-1lgpqti,
+body .rn-1lgpqti {
+  z-index: unset;
+}
+
+.View,
+.Text,
+.Image,
+.TouchableOpacity,
+.ActivityIndicator,
+.ActivityIndicator > div {
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+}
+
+.View {
+  /* z-index: 0; */
+  position: relative;
+  /* padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-top: 0px; */
+  min-width: 0px;
+  min-height: 0px;
+  /* margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-top: 0px; */
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+  flex-basis: auto;
+  flex-shrink: 0;
+  display: flex;
+  box-sizing: border-box;
+  /* border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px; */
+  border-style: solid;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+}
+
+.Text {
+  /* cursor: pointer; */
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+  font-variant: inherit;
+  font-style: inherit;
+  font-size: 1em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  display: inline;
+  color: inherit;
+  /* padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-top: 0px; */
+  /* margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-top: 0px; */
+  box-sizing: border-box;
+  /* border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px; */
+}
+
+.Text.handlePress {
+  cursor: pointer;
+}
+
+.Text.handlePress:hover {
+  text-decoration: underline;
+}
+
+.Image {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  /* z-index: 0; */
+  position: relative;
+  /* padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-top: 0px; */
+  min-width: 0px;
+  min-height: 0px;
+  /* margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-top: 0px; */
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+  flex-basis: auto;
+  flex-shrink: 0;
+  display: flex;
+  box-sizing: border-box;
+  /* border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px; */
+  border-style: solid;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+}
+
+.TouchableOpacity {
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  /* z-index: 0; */
+  position: relative;
+  /* padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-top: 0px; */
+  min-width: 0px;
+  min-height: 0px;
+  /* margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-top: 0px; */
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+  flex-basis: auto;
+  flex-shrink: 0;
+  display: flex;
+  box-sizing: border-box;
+  /* border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px; */
+  border-style: solid;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+}
+
+/* Disabled style */
+.TouchableOpacity.disabled {
+  opacity: 0.5;
+}
+
+.ActivityIndicator {
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  /* z-index: 0; */
+  position: relative;
+  /* padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-top: 0px; */
+  min-width: 0px;
+  min-height: 0px;
+  /* margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-top: 0px; */
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+  flex-basis: auto;
+  flex-shrink: 0;
+  display: flex;
+  box-sizing: border-box;
+  /* border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px; */
+  border-style: solid;
+}
+
+.ActivityIndicator > div {
+  animation-timing-function: linear;
+  /* animation-name: rn-anim-1309axw; */
+  animation-name: rotation;
+  animation-iteration-count: infinite;
+  animation-duration: 0.75s;
+  width: 36px;
+  height: 36px;
+  /* z-index: 0; */
+  position: relative;
+  /* padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-top: 0px; */
+  min-width: 0px;
+  min-height: 0px;
+  /* margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-top: 0px; */
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+  flex-basis: auto;
+  flex-shrink: 0;
+  display: flex;
+  box-sizing: border-box;
+  /* border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px; */
+  border-style: solid;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.ScrollView {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ScrollView-content {
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.ScrollView-topOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(white, transparent);
+  pointer-events: none;
+}
+
+.ScrollView-bottomOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(transparent, white);
+  pointer-events: none;
+}
+
+.TextInput {
+  flex-shrink: 1;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  resize: none;
+  font-size: 1em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-style: solid;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-left-color: rgb(0, 0, 0);
+  border-bottom-color: rgb(0, 0, 0);
+  border-right-color: rgb(0, 0, 0);
+  border-top-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
+}
+
+a.TouchableOpacity:hover {
+  text-decoration: none;
+}
+
+.TouchableOpacity:hover {
+  filter: brightness(0.85);
+}

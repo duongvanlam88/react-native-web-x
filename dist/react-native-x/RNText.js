@@ -1,0 +1,13 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(require("react"));
+class RNText extends react_1.default.Component {
+    render() {
+        const { className = '', onPress, style } = this.props;
+        return (react_1.default.createElement("div", { className: `Text ${className} ${(onPress) ? 'handlePress' : ''}`, onClick: onPress, style: style }, this.props.children));
+    }
+}
+exports.RNText = RNText;
