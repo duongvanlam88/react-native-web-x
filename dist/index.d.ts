@@ -1,6 +1,7 @@
 /// <reference types="react" />
 import React from 'react';
 import './index.css';
+export * from './react-native-web-x';
 import { RNActivityIndicator as ActivityIndicator } from './react-native-x/RNActivityIndicator';
 import { RNAlert as Alert } from './react-native-x/RNAlert';
 import { RNAsyncStorage as AsyncStorage } from './react-native-x/RNAsyncStorage';
@@ -15,6 +16,5 @@ import { RNTextInput as TextInput } from './react-native-x/RNTextInput';
 import { RNTouchableOpacity as TouchableOpacity } from './react-native-x/RNTouchableOpacity';
 import { RNTouchableWithoutFeedback as TouchableWithoutFeedback } from './react-native-x/RNTouchableWithoutFeedback';
 import { RNView as View } from './react-native-x/RNView';
-export * from './react-native-web-x';
 export { View, Text, I18nManager, Image, AsyncStorage, ImageBackground, TouchableOpacity, TouchableWithoutFeedback, ActivityIndicator, Alert, ScrollView, TextInput, StyleSheet, NativeModules };
 export declare const requireNativeComponent: <T>(name: string) => React.ComponentType<T>;

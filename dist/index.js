@@ -4,6 +4,7 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 require("./index.css");
+__export(require("./react-native-web-x"));
 const RNActivityIndicator_1 = require("./react-native-x/RNActivityIndicator");
 exports.ActivityIndicator = RNActivityIndicator_1.RNActivityIndicator;
 const RNAlert_1 = require("./react-native-x/RNAlert");
@@ -32,7 +33,6 @@ const RNTouchableWithoutFeedback_1 = require("./react-native-x/RNTouchableWithou
 exports.TouchableWithoutFeedback = RNTouchableWithoutFeedback_1.RNTouchableWithoutFeedback;
 const RNView_1 = require("./react-native-x/RNView");
 exports.View = RNView_1.RNView;
-__export(require("./react-native-web-x"));
 exports.requireNativeComponent = (name) => {
     return () => null;
 };
