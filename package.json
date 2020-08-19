@@ -2,7 +2,7 @@
   "name": "react-native-web-x",
   "version": "1.0.0",
   "main": "./dist/index.js",
-  "types": "./src/index.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "/dist"
   ],
@@ -13,6 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@types/react-native-web": "https://github.com/duongvanlam88/types-react-native-web",
     "react-native-web": "0.12.2"
   },
   "devDependencies": {
