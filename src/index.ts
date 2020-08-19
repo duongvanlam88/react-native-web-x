@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 
 // we must export this before our custom components
-export * from './react-native-web-x';
+export * from 'react-native-web';
 
 import { RNActivityIndicator as ActivityIndicator } from './react-native-x/RNActivityIndicator';
 import { RNAlert as Alert } from './react-native-x/RNAlert';

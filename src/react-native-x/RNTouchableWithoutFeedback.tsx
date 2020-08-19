@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import { StyleProp, ViewStyle } from '../react-native-web-x';
+import { StyleProp, ViewStyle } from 'react-native-web';
 
 export interface RNTouchableWithoutFeedbackProps {
   className?: string;

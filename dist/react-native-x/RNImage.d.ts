@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageStyle, StyleProp } from '../react-native-web-x';
+import { ImageStyle, StyleProp } from 'react-native-web';
 export interface RNImageProps {
     className?: string;
     resizeMode?: 'contain' | 'cover' | 'stretch';

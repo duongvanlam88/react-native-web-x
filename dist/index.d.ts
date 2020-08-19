@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-export * from './react-native-web-x';
+export * from 'react-native-web';
 import { RNActivityIndicator as ActivityIndicator } from './react-native-x/RNActivityIndicator';
 import { RNAlert as Alert } from './react-native-x/RNAlert';
 import { RNAsyncStorage as AsyncStorage } from './react-native-x/RNAsyncStorage';
