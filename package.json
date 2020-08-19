@@ -13,8 +13,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@types/react-native-web": "https://github.com/duongvanlam88/types-react-native-web",
-    "react-native-web": "npm:react-native-web@0.12.2"
+    "@types/react-native-web": "https://github.com/duongvanlam88/types-react-native-web.git",
+    "react-native-web": "0.12.2"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.1",
