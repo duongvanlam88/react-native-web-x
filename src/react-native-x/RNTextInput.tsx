@@ -1,5 +1,5 @@
 import React from 'react';
-import { KeyboardTypeOptions, MeasureInWindowOnSuccessCallback, NativeSyntheticEvent, StyleProp, TextInputFocusEventData, TextStyle } from 'react-native-web';
+import { KeyboardTypeOptions, MeasureInWindowOnSuccessCallback, NativeSyntheticEvent, StyleProp, TextInputFocusEventData, TextStyle } from 'react-native-web-2';
 
 export interface RNTextInputProps {
   className?: string;

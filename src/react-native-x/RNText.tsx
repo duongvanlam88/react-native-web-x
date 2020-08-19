@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleProp, TextStyle } from 'react-native-web';
+import { StyleProp, TextStyle } from 'react-native-web-2';
 
 export interface RNTextProps {
   className?: string;

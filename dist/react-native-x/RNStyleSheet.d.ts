@@ -1,4 +1,4 @@
-import { ImageStyle, RegisteredStyle, TextStyle, ViewStyle } from 'react-native-web';
+import { ImageStyle, RegisteredStyle, TextStyle, ViewStyle } from 'react-native-web-2';
 export declare type NamedStyles<T> = {
     [P in keyof T]: ViewStyle | TextStyle | ImageStyle;
 };
