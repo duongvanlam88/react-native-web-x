@@ -1,5 +1,5 @@
 import React, { MouseEvent } from 'react';
-import { StyleProp, ViewStyle } from 'react-native-web-2';
+import { StyleProp, ViewStyle } from 'react-native-web';
 export interface RNTouchableOpacityProps {
     className?: string;
     to?: string;

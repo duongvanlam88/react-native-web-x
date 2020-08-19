@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleProp, ViewStyle } from 'react-native-web-2';
+import { StyleProp, ViewStyle } from 'react-native-web';
 export interface RNTouchableWithoutFeedbackProps {
     className?: string;
     onPress?: (event: any) => void;

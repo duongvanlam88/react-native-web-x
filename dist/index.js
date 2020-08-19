@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.requireNativeComponent = exports.NativeModules = exports.StyleSheet = exports.TextInput = exports.ScrollView = exports.Alert = exports.ActivityIndicator = exports.TouchableWithoutFeedback = exports.TouchableOpacity = exports.ImageBackground = exports.AsyncStorage = exports.Image = exports.I18nManager = exports.Text = exports.View = void 0;
 require("./index.css");
 // we must export this before our custom components
-__exportStar(require("react-native-web-2"), exports);
+__exportStar(require("react-native-web"), exports);
 const RNActivityIndicator_1 = require("./react-native-x/RNActivityIndicator");
 Object.defineProperty(exports, "ActivityIndicator", { enumerable: true, get: function () { return RNActivityIndicator_1.RNActivityIndicator; } });
 const RNAlert_1 = require("./react-native-x/RNAlert");
