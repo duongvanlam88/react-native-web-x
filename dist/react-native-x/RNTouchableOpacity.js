@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RNTouchableOpacity = void 0;
+const jquery_1 = __importDefault(require("jquery"));
 const react_1 = __importDefault(require("react"));
 class RNTouchableOpacity extends react_1.default.Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class RNTouchableOpacity extends react_1.default.Component {
     }
     touchableHandlePress(event) {
         if (this.componentRef) {
-            $(this.componentRef).trigger('click');
+            jquery_1.default(this.componentRef).trigger('click');
         }
     }
     handleOnClick(event) {

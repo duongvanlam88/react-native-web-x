@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React, { MouseEvent } from 'react';
 import { StyleProp, ViewStyle } from 'react-native-web';
 
