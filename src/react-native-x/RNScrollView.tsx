@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native-web';
-import { mergeClasses } from './utils';
+import { extractAttributes, mergeClasses } from './utils';
 
 export interface RNScrollViewProps {
   className?: string;
@@ -18,20 +18,17 @@ export class RNScrollView extends React.Component<RNScrollViewProps> {
 
   public render() {
     const { className, style, contentContainerStyle } = this.props;
-    const finalStyle = (style) ? { ...style as any } : {};
-    const finalContentStyle = {
-      ...((finalStyle.padding !== undefined) ? { padding: finalStyle.padding } : {}),
-      ...((finalStyle.paddingTop !== undefined) ? { paddingTop: finalStyle.paddingTop } : {}),
-      ...((finalStyle.paddingBottom !== undefined) ? { paddingBottom: finalStyle.paddingBottom } : {}),
-      ...((finalStyle.paddingLeft !== undefined) ? { paddingLeft: finalStyle.paddingLeft } : {}),
-      ...((finalStyle.paddingRight !== undefined) ? { paddingRight: finalStyle.paddingRight } : {}),
-    };
-
-    delete finalStyle.padding;
-    delete finalStyle.paddingTop;
-    delete finalStyle.paddingBottom;
-    delete finalStyle.paddingLeft;
-    delete finalStyle.paddingRight;
+    const additionalContentContainerStyle = extractAttributes(style, [
+      'padding',
+      'paddingTop',
+      'paddingBottom',
+      'paddingLeft',
+      'paddingRight',
+      'paddingHorizontal',
+      'paddingVertical',
+      'paddingStart',
+      'paddingEnd',
+    ]);
 
     return (
       <div
@@ -39,13 +36,13 @@ export class RNScrollView extends React.Component<RNScrollViewProps> {
           'ScrollView',
           className,
         ])}
-        style={finalStyle as any}
+        style={style as any}
       >
         <div
           className="ScrollView-content"
           style={{
-            ...finalContentStyle,
-            ...(contentContainerStyle as any || {}),
+            ...additionalContentContainerStyle,
+            ...(contentContainerStyle || {}) as any,
           }}
         >
           {this.props.children}
