@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native-web';
+import { mergeClasses } from './utils';
 
 export interface RNTouchableWithoutFeedbackProps {
   className?: string;
@@ -23,12 +24,15 @@ export class RNTouchableWithoutFeedback extends React.Component<RNTouchableWitho
   }
 
   public render() {
-    const { className = '', onPress, onPressIn, onPressOut, disabled, style } = this.props;
+    const { className, onPress, onPressIn, onPressOut, disabled, style } = this.props;
 
     return (
       <div
         ref={(node) => this.componentRef = node}
-        className={`TouchableWithoutFeedback ${className}`}
+        className={mergeClasses([
+          'TouchableWithoutFeedback',
+          className,
+        ])}
         onClick={(!disabled) ? onPress : undefined}
         onMouseDown={(!disabled) ? onPressIn : undefined}
         onMouseUp={(!disabled) ? onPressOut : undefined}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ImageStyle, StyleProp } from 'react-native-web';
+import { mergeClasses } from './utils';
 
 export interface RNImageProps {
   className?: string;
@@ -18,7 +19,7 @@ export class RNImage extends React.Component<RNImageProps> {
   }
 
   public render() {
-    const { className = '', source, style } = this.props;
+    const { className, source, style } = this.props;
     let { resizeMode } = this.props;
     resizeMode = (resizeMode)
       ?
@@ -31,7 +32,10 @@ export class RNImage extends React.Component<RNImageProps> {
 
     return (
       <div
-        className={`Image ${className}`}
+        className={mergeClasses([
+          'Image',
+          className,
+        ])}
         style={style as any}
       >
         <div style={{

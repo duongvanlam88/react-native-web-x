@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native-web';
+import { mergeClasses } from './utils';
 
 export interface RNViewProps {
   className?: string;
@@ -19,12 +20,15 @@ export class RNView extends React.Component<RNViewProps> {
   }
 
   public render() {
-    const { className = '', style } = this.props;
+    const { className, style } = this.props;
 
     return (
       <div
         ref={(node) => this.viewRef = node}
-        className={`View ${className}`}
+        className={mergeClasses([
+          'View',
+          className,
+        ])}
         style={style as any}
       >
         {this.props.children}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { KeyboardTypeOptions, MeasureInWindowOnSuccessCallback, NativeSyntheticEvent, StyleProp, TextInputFocusEventData, TextStyle } from 'react-native-web';
+import { mergeClasses } from './utils';
 
 export interface RNTextInputProps {
   className?: string;
@@ -54,12 +55,15 @@ export class RNTextInput extends React.Component<RNTextInputProps> {
   }
 
   public render() {
-    const { className = '', placeholder, multiline, autoCapitalize, autoFocus, maxLength, onBlur, value, style } = this.props;
+    const { className, placeholder, multiline, autoCapitalize, autoFocus, maxLength, onBlur, value, style } = this.props;
 
     return (
       <input
         ref={(node) => this.inputRef = node}
-        className={`TextInput ${className}`}
+        className={mergeClasses([
+          'TextInput',
+          className,
+        ])}
         placeholder={placeholder}
         multiple={multiline}
         autoCapitalize={autoCapitalize}

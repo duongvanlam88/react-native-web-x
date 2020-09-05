@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React, { MouseEvent } from 'react';
 import { StyleProp, ViewStyle } from 'react-native-web';
+import { mergeClasses } from './utils';
 
 export interface RNTouchableOpacityProps {
   className?: string;
@@ -67,7 +68,7 @@ export class RNTouchableOpacity extends React.Component<RNTouchableOpacityProps>
   }
 
   public render() {
-    const { className = '', to, disabled, style = {} } = this.props;
+    const { className, to, disabled, style = {} } = this.props;
     const { backgroundColor } = style as any;
     console.log('RNTouchableOpacity');
 
@@ -75,7 +76,11 @@ export class RNTouchableOpacity extends React.Component<RNTouchableOpacityProps>
       return (
         <a
           ref={(node) => this.componentRef = node}
-          className={`TouchableOpacity ${className} ${(disabled) ? 'disabled' : ''}`}
+          className={mergeClasses([
+            'TouchableOpacity',
+            className,
+            (disabled) ? 'disabled' : undefined,
+          ])}
           href={to}
           // onMouseEnter={() => Router.prefetch(to)}
           onKeyPress={(event) => {
@@ -96,7 +101,11 @@ export class RNTouchableOpacity extends React.Component<RNTouchableOpacityProps>
       return (
         <div
           ref={(node) => this.componentRef = node}
-          className={`TouchableOpacity ${className} ${(disabled) ? 'disabled' : ''}`}
+          className={mergeClasses([
+            'TouchableOpacity',
+            className,
+            (disabled) ? 'disabled' : undefined,
+          ])}
           tabIndex={0}
           onKeyPress={(event) => {
             if (event.which === 13) {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native-web';
+import { mergeClasses } from './utils';
 
 export interface RNActivityIndicatorProps {
   className?: string;
@@ -10,11 +11,14 @@ export interface RNActivityIndicatorProps {
 
 export class RNActivityIndicator extends React.Component<RNActivityIndicatorProps> {
   public render() {
-    const { className = '', size, color = 'rgb(25, 118, 210)', style } = this.props;
+    const { className, size, color = 'rgb(25, 118, 210)', style } = this.props;
 
     return (
       <div
-        className={`ActivityIndicator ${className}`}
+        className={mergeClasses([
+          'ActivityIndicator',
+          className,
+        ])}
         style={(style) ? style as any : {}}
       >
         <div style={

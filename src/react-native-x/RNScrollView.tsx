@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native-web';
+import { mergeClasses } from './utils';
 
 export interface RNScrollViewProps {
   className?: string;
@@ -16,7 +17,7 @@ export class RNScrollView extends React.Component<RNScrollViewProps> {
   }
 
   public render() {
-    const { className = '', style, contentContainerStyle } = this.props;
+    const { className, style, contentContainerStyle } = this.props;
     const finalStyle = (style) ? { ...style as any } : {};
     const finalContentStyle = {
       ...((finalStyle.padding !== undefined) ? { padding: finalStyle.padding } : {}),
@@ -34,7 +35,10 @@ export class RNScrollView extends React.Component<RNScrollViewProps> {
 
     return (
       <div
-        className={`ScrollView ${className}`}
+        className={mergeClasses([
+          'ScrollView',
+          className,
+        ])}
         style={finalStyle as any}
       >
         <div

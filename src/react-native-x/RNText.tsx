@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleProp, TextStyle } from 'react-native-web';
+import { mergeClasses } from './utils';
 
 export interface RNTextProps {
   className?: string;
@@ -11,11 +12,15 @@ export interface RNTextProps {
 
 export class RNText extends React.Component<RNTextProps> {
   public render() {
-    const { className = '', onPress, style } = this.props;
+    const { className, onPress, style } = this.props;
 
     return (
       <div
-        className={`Text ${className} ${(onPress) ? 'handlePress' : ''}`}
+        className={mergeClasses([
+          'Text',
+          className,
+          (onPress) ? 'handlePress' : undefined,
+        ])}
         onClick={onPress}
         style={style as any}
       >

@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native-web';
+import { mergeClasses } from './utils';
 
 export interface RNImageBackgroundProps {
   className?: string;
@@ -10,7 +11,7 @@ export interface RNImageBackgroundProps {
 
 export class RNImageBackground extends React.Component<RNImageBackgroundProps> {
   public render() {
-    const { className = '', source, children, style } = this.props;
+    const { className, source, children, style } = this.props;
     let { resizeMode } = this.props;
     resizeMode = (resizeMode)
       ?
@@ -23,7 +24,10 @@ export class RNImageBackground extends React.Component<RNImageBackgroundProps> {
 
     return (
       <div
-        className={`ImageBackground ${className}`}
+        className={mergeClasses([
+          'ImageBackground',
+          className,
+        ])}
         style={style as any}
       >
         <div style={{
