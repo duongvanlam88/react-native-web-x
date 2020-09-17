@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RNImage = void 0;
 const react_1 = __importDefault(require("react"));
+const utils_1 = require("./utils");
 class RNImage extends react_1.default.Component {
     componentDidMount() {
         const { onLoadEnd } = this.props;
@@ -13,7 +14,7 @@ class RNImage extends react_1.default.Component {
         }
     }
     render() {
-        const { className = '', source, style } = this.props;
+        const { className, source, style } = this.props;
         let { resizeMode } = this.props;
         resizeMode = (resizeMode)
             ?
@@ -22,7 +23,10 @@ class RNImage extends react_1.default.Component {
                 (style) ? style.resizeMode : undefined;
         // transform resizeMode to css backgroundSize
         const backgroundSize = (resizeMode === 'stretch') ? '100% 100%' : resizeMode || 'cover';
-        return (react_1.default.createElement("div", { className: `Image ${className}`, style: style },
+        return (react_1.default.createElement("div", { className: utils_1.mergeClasses([
+                'Image',
+                className,
+            ]), style: style },
             react_1.default.createElement("div", { style: {
                     width: '100%',
                     height: '100%',

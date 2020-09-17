@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.RNTouchableOpacity = void 0;
 const jquery_1 = __importDefault(require("jquery"));
 const react_1 = __importDefault(require("react"));
+const utils_1 = require("./utils");
 class RNTouchableOpacity extends react_1.default.Component {
     constructor(props) {
         super(props);
@@ -49,11 +50,15 @@ class RNTouchableOpacity extends react_1.default.Component {
         return false;
     }
     render() {
-        const { className = '', to, disabled, style = {} } = this.props;
+        const { className, to, disabled, style = {} } = this.props;
         const { backgroundColor } = style;
         console.log('RNTouchableOpacity');
         if (to && !disabled) {
-            return (react_1.default.createElement("a", { ref: (node) => this.componentRef = node, className: `TouchableOpacity ${className} ${(disabled) ? 'disabled' : ''}`, href: to, 
+            return (react_1.default.createElement("a", { ref: (node) => this.componentRef = node, className: utils_1.mergeClasses([
+                    'TouchableOpacity',
+                    className,
+                    (disabled) ? 'disabled' : undefined,
+                ]), href: to, 
                 // onMouseEnter={() => Router.prefetch(to)}
                 onKeyPress: (event) => {
                     if (event.which === 13) {
@@ -62,7 +67,11 @@ class RNTouchableOpacity extends react_1.default.Component {
                 }, onClick: this.handleOnClick, style: Object.assign(Object.assign({}, style), (backgroundColor ? { background: backgroundColor } : {})) }, this.props.children));
         }
         else {
-            return (react_1.default.createElement("div", { ref: (node) => this.componentRef = node, className: `TouchableOpacity ${className} ${(disabled) ? 'disabled' : ''}`, tabIndex: 0, onKeyPress: (event) => {
+            return (react_1.default.createElement("div", { ref: (node) => this.componentRef = node, className: utils_1.mergeClasses([
+                    'TouchableOpacity',
+                    className,
+                    (disabled) ? 'disabled' : undefined,
+                ]), tabIndex: 0, onKeyPress: (event) => {
                     if (event.which === 13) {
                         this.handleOnClick(event);
                     }

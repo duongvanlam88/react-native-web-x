@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.RNView = void 0;
 const jquery_1 = __importDefault(require("jquery"));
 const react_1 = __importDefault(require("react"));
+const utils_1 = require("./utils");
 class RNView extends react_1.default.Component {
     setNativeProps(props) {
         if (this.viewRef) {
@@ -13,8 +14,11 @@ class RNView extends react_1.default.Component {
         }
     }
     render() {
-        const { className = '', style } = this.props;
-        return (react_1.default.createElement("div", { ref: (node) => this.viewRef = node, className: `View ${className}`, style: style }, this.props.children));
+        const { className, style } = this.props;
+        return (react_1.default.createElement("div", { ref: (node) => this.viewRef = node, className: utils_1.mergeClasses([
+                'View',
+                className,
+            ]), style: style }, this.props.children));
     }
 }
 exports.RNView = RNView;

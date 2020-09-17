@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.RNTouchableWithoutFeedback = void 0;
 const jquery_1 = __importDefault(require("jquery"));
 const react_1 = __importDefault(require("react"));
+const utils_1 = require("./utils");
 class RNTouchableWithoutFeedback extends react_1.default.Component {
     touchableHandlePress(event) {
         if (this.componentRef) {
@@ -13,8 +14,11 @@ class RNTouchableWithoutFeedback extends react_1.default.Component {
         }
     }
     render() {
-        const { className = '', onPress, onPressIn, onPressOut, disabled, style } = this.props;
-        return (react_1.default.createElement("div", { ref: (node) => this.componentRef = node, className: `TouchableWithoutFeedback ${className}`, onClick: (!disabled) ? onPress : undefined, onMouseDown: (!disabled) ? onPressIn : undefined, onMouseUp: (!disabled) ? onPressOut : undefined, style: style }, this.props.children));
+        const { className, onPress, onPressIn, onPressOut, disabled, style } = this.props;
+        return (react_1.default.createElement("div", { ref: (node) => this.componentRef = node, className: utils_1.mergeClasses([
+                'TouchableWithoutFeedback',
+                className,
+            ]), onClick: (!disabled) ? onPress : undefined, onMouseDown: (!disabled) ? onPressIn : undefined, onMouseUp: (!disabled) ? onPressOut : undefined, style: style }, this.props.children));
     }
 }
 exports.RNTouchableWithoutFeedback = RNTouchableWithoutFeedback;

@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RNTextInput = void 0;
 const react_1 = __importDefault(require("react"));
+const utils_1 = require("./utils");
 class RNTextInput extends react_1.default.Component {
     constructor(props) {
         super(props);
@@ -32,8 +33,11 @@ class RNTextInput extends react_1.default.Component {
         // Don't support yet
     }
     render() {
-        const { className = '', placeholder, multiline, autoCapitalize, autoFocus, maxLength, onBlur, value, style } = this.props;
-        return (react_1.default.createElement("input", { ref: (node) => this.inputRef = node, className: `TextInput ${className}`, placeholder: placeholder, multiple: multiline, autoCapitalize: autoCapitalize, autoFocus: autoFocus, maxLength: maxLength, onChange: this.handleChange, onBlur: onBlur, value: value, style: style }));
+        const { className, placeholder, multiline, autoCapitalize, autoFocus, maxLength, onBlur, value, style } = this.props;
+        return (react_1.default.createElement("input", { ref: (node) => this.inputRef = node, className: utils_1.mergeClasses([
+                'TextInput',
+                className,
+            ]), placeholder: placeholder, multiple: multiline, autoCapitalize: autoCapitalize, autoFocus: autoFocus, maxLength: maxLength, onChange: this.handleChange, onBlur: onBlur, value: value, style: style }));
     }
 }
 exports.RNTextInput = RNTextInput;

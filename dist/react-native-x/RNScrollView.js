@@ -5,21 +5,29 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RNScrollView = void 0;
 const react_1 = __importDefault(require("react"));
+const utils_1 = require("./utils");
 class RNScrollView extends react_1.default.Component {
     scrollTo(y, x, animated) {
         // Don't support yet
     }
     render() {
-        const { className = '', style, contentContainerStyle } = this.props;
-        const finalStyle = (style) ? Object.assign({}, style) : {};
-        const finalContentStyle = Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({}, ((finalStyle.padding !== undefined) ? { padding: finalStyle.padding } : {})), ((finalStyle.paddingTop !== undefined) ? { paddingTop: finalStyle.paddingTop } : {})), ((finalStyle.paddingBottom !== undefined) ? { paddingBottom: finalStyle.paddingBottom } : {})), ((finalStyle.paddingLeft !== undefined) ? { paddingLeft: finalStyle.paddingLeft } : {})), ((finalStyle.paddingRight !== undefined) ? { paddingRight: finalStyle.paddingRight } : {}));
-        delete finalStyle.padding;
-        delete finalStyle.paddingTop;
-        delete finalStyle.paddingBottom;
-        delete finalStyle.paddingLeft;
-        delete finalStyle.paddingRight;
-        return (react_1.default.createElement("div", { className: `ScrollView ${className}`, style: finalStyle },
-            react_1.default.createElement("div", { className: "ScrollView-content", style: Object.assign(Object.assign({}, finalContentStyle), (contentContainerStyle || {})) }, this.props.children),
+        const { className, style, contentContainerStyle } = this.props;
+        const additionalContentContainerStyle = utils_1.extractAttributes(style, [
+            'padding',
+            'paddingTop',
+            'paddingBottom',
+            'paddingLeft',
+            'paddingRight',
+            'paddingHorizontal',
+            'paddingVertical',
+            'paddingStart',
+            'paddingEnd',
+        ]);
+        return (react_1.default.createElement("div", { className: utils_1.mergeClasses([
+                'ScrollView',
+                className,
+            ]), style: style },
+            react_1.default.createElement("div", { className: "ScrollView-content", style: Object.assign(Object.assign({}, additionalContentContainerStyle), (contentContainerStyle || {})) }, this.props.children),
             react_1.default.createElement("div", { className: "ScrollView-topOverlay" }),
             react_1.default.createElement("div", { className: "ScrollView-bottomOverlay" })));
     }
