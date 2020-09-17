@@ -34,6 +34,10 @@ export interface RNButtonData {
 export type OnAlert = (alert: RNAlertData & {
   options?: {
     cancelable?: boolean,
+    autoSelect?: {
+      text: string,
+      afterSeconds: number;
+    },
     onDismiss?: () => void;
   }
 }) => void;
@@ -47,6 +51,10 @@ export class RNAlert {
 
   public static alert(title: string, message: string, buttons?: RNButtonData[], options?: {
     cancelable?: boolean,
+    autoSelect?: {
+      text: string,
+      afterSeconds: number;
+    },
     onDismiss?: () => void;
   }) {
     if (RNAlert._onAlert) {
