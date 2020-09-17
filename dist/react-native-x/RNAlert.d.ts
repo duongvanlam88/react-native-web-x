@@ -6,19 +6,13 @@ export interface RNAlertData {
 }
 export interface RNButtonData {
     text: string;
+    autoSelectAfterSeconds?: number;
     onPress?: () => void;
     style?: 'cancel' | 'destructive';
-    options?: {
-        cancelable?: boolean;
-    };
 }
 export declare type OnAlert = (alert: RNAlertData & {
     options?: {
         cancelable?: boolean;
-        autoSelect?: {
-            text: string;
-            afterSeconds: number;
-        };
         onDismiss?: () => void;
     };
 }) => void;
@@ -27,10 +21,6 @@ export declare class RNAlert {
     static setOnAlert(onAlert: OnAlert): void;
     static alert(title: string, message: string, buttons?: RNButtonData[], options?: {
         cancelable?: boolean;
-        autoSelect?: {
-            text: string;
-            afterSeconds: number;
-        };
         onDismiss?: () => void;
     }): void;
 }
