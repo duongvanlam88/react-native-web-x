@@ -9,6 +9,9 @@ export const extractAttributes = (object: any, keys: string[]) => {
     return [object, undefined];
   }
 
+  // we clone object before modifying it
+  object = { ...object };
+
   keys.map((key) => {
     const value = object[key];
     if (value !== undefined && value !== null) {

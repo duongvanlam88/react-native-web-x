@@ -9,6 +9,8 @@ exports.extractAttributes = (object, keys) => {
     if (!object) {
         return [object, undefined];
     }
+    // we clone object before modifying it
+    object = Object.assign({}, object);
     keys.map((key) => {
         const value = object[key];
         if (value !== undefined && value !== null) {
