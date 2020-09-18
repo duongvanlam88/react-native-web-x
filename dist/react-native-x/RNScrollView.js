@@ -12,7 +12,7 @@ class RNScrollView extends react_1.default.Component {
     }
     render() {
         const { className, style, contentContainerStyle } = this.props;
-        const additionalContentContainerStyle = utils_1.extractAttributes(style, [
+        const [transformedStyle, additionalContentContainerStyle] = utils_1.extractAttributes(style, [
             'padding',
             'paddingTop',
             'paddingBottom',
@@ -26,7 +26,7 @@ class RNScrollView extends react_1.default.Component {
         return (react_1.default.createElement("div", { className: utils_1.mergeClasses([
                 'ScrollView',
                 className,
-            ]), style: style },
+            ]), style: transformedStyle },
             react_1.default.createElement("div", { className: "ScrollView-content", style: Object.assign(Object.assign({}, additionalContentContainerStyle), (contentContainerStyle || {})) }, this.props.children),
             react_1.default.createElement("div", { className: "ScrollView-topOverlay" }),
             react_1.default.createElement("div", { className: "ScrollView-bottomOverlay" })));

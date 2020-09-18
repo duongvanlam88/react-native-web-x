@@ -7,7 +7,7 @@ exports.mergeClasses = (classes) => {
 exports.extractAttributes = (object, keys) => {
     const result = {};
     if (!object) {
-        return object;
+        return [object, undefined];
     }
     keys.map((key) => {
         const value = object[key];
@@ -17,5 +17,5 @@ exports.extractAttributes = (object, keys) => {
         // delete key from original object
         delete object[key];
     });
-    return result;
+    return [object, result];
 };

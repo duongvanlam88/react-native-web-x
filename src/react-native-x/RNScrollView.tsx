@@ -18,7 +18,7 @@ export class RNScrollView extends React.Component<RNScrollViewProps> {
 
   public render() {
     const { className, style, contentContainerStyle } = this.props;
-    const additionalContentContainerStyle = extractAttributes(style, [
+    const [transformedStyle, additionalContentContainerStyle] = extractAttributes(style, [
       'padding',
       'paddingTop',
       'paddingBottom',
@@ -36,7 +36,7 @@ export class RNScrollView extends React.Component<RNScrollViewProps> {
           'ScrollView',
           className,
         ])}
-        style={style as any}
+        style={transformedStyle as any}
       >
         <div
           className="ScrollView-content"

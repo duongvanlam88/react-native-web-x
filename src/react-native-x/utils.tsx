@@ -6,7 +6,7 @@ export const extractAttributes = (object: any, keys: string[]) => {
   const result: { [key: string]: any } = {};
 
   if (!object) {
-    return object;
+    return [object, undefined];
   }
 
   keys.map((key) => {
@@ -19,5 +19,5 @@ export const extractAttributes = (object: any, keys: string[]) => {
     delete object[key];
   });
 
-  return result;
+  return [object, result];
 }
