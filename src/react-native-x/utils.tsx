@@ -5,6 +5,10 @@ export const mergeClasses = (classes: (string | undefined)[]) => {
 export const extractAttributes = (object: any, keys: string[]) => {
   const result: { [key: string]: any } = {};
 
+  if (!object) {
+    return object;
+  }
+
   keys.map((key) => {
     const value = object[key];
     if (value !== undefined && value !== null) {

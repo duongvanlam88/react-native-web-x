@@ -6,6 +6,9 @@ exports.mergeClasses = (classes) => {
 };
 exports.extractAttributes = (object, keys) => {
     const result = {};
+    if (!object) {
+        return object;
+    }
     keys.map((key) => {
         const value = object[key];
         if (value !== undefined && value !== null) {
