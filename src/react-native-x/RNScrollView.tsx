@@ -47,8 +47,8 @@ export class RNScrollView extends React.Component<RNScrollViewProps> {
         >
           {this.props.children}
         </div>
-        <div className="ScrollView-topOverlay" />
-        <div className="ScrollView-bottomOverlay" />
+        {/* <div className="ScrollView-topOverlay" />
+        <div className="ScrollView-bottomOverlay" /> */}
       </div>
     );
   }

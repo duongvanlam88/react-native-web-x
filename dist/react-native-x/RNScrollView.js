@@ -27,9 +27,7 @@ class RNScrollView extends react_1.default.Component {
                 'ScrollView',
                 className,
             ]), style: transformedStyle },
-            react_1.default.createElement("div", { className: "ScrollView-content", style: Object.assign(Object.assign({}, additionalContentContainerStyle), (contentContainerStyle || {})) }, this.props.children),
-            react_1.default.createElement("div", { className: "ScrollView-topOverlay" }),
-            react_1.default.createElement("div", { className: "ScrollView-bottomOverlay" })));
+            react_1.default.createElement("div", { className: "ScrollView-content", style: Object.assign(Object.assign({}, additionalContentContainerStyle), (contentContainerStyle || {})) }, this.props.children)));
     }
 }
 exports.RNScrollView = RNScrollView;

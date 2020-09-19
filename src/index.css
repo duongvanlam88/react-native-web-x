@@ -254,7 +254,7 @@ body .rn-1lgpqti {
   overflow-y: auto;
 }
 
-.ScrollView-topOverlay {
+/* .ScrollView-topOverlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -274,7 +274,7 @@ body .rn-1lgpqti {
   height: 20px;
   background: linear-gradient(transparent, white);
   pointer-events: none;
-}
+} */
 
 .TextInput {
   flex-shrink: 1;
